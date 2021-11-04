@@ -1,0 +1,108 @@
+
+<!-- class="section-padding" -->
+<section data-bs-spy="scroll" data-bs-target="#navbar-scrollby" data-bs-offset="0" tabindex="0" class="scrollspy-example d-flex flex-column justify-content-center align-items-center align-self-center" id="work">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <div class="section-title mb-0">
+                    <h2>My <span>work</span></h2> 
+                    <span class="border-line"></span>
+                    <p class="subtitle-caption mb-1">Here you can see all code reviews I've done so far in action.</p>
+                </div>
+            </div>
+        </div><!-- title row end--> 
+
+        <!-- id="otherskills" -->
+        <div class="row row-cols-1 row-cols-md-3 g-1 g-md-4">
+            <div class="col" *ngFor="let data of data_set; let i = index; let first = first; let last = last">
+                <div class="entry-thumb portfolio-thumb" *ngIf="!last">
+                    <div class="imgoverlay text-light">
+                        <a href="{{data.path}}" target="_blank">
+                            <img src="../assets/img/{{data.image}}" class="img-responsive" alt="{{data.headline}}">
+                            <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo"><h6>{{data.headline}}</h6></div></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="entry-thumb portfolio-thumb" *ngIf="last">
+                    <div class="imgoverlay text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="../assets/img/{{data.image}}" class="img-responsive" alt="{{data.headline}}">
+                        <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo"><h6>{{data.headline}}</h6></div></div>
+                    </div>
+
+                    <!-- Modal Start -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Info about my GIMP work</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="../assets/img/{{data.image}}" class="img-fluid" alt="{{data.headline}}">
+                                <p class="text-center my-2">The gallery you see was created using Python+PIL</p>
+                                <pre class="prettyprint">
+                                    <code class="language-python">
+import os
+import sys
+from PIL import Image
+def GetImageList(files, ext = ('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif', '.webp')):
+    l = []
+    for f in files:
+        if f.endswith(ext) and f != "thumbnail_canvas.jpg": l.append(f)
+    return l
+                                        
+image_list = GetImageList(os.listdir(os.getcwd()))
+num_rows = 3
+
+print("Calculate number of columns...")
+num_cols = len(image_list)/num_rows
+num_cols = int(num_cols) + ((((num_cols-int(num_cols)) > 0) and 1) or 0)
+
+margin_x = 150
+margin_y = 150
+new_x = 1280
+new_y = 720
+img_dis = 100
+
+# main image sizes
+print("Created black canvas!!!")
+canvas_width = new_x*num_rows + 2*margin_x + img_dis*(num_rows-1)
+canvas_height = new_y*num_cols + 2*margin_y + img_dis*(num_cols-1)
+canvas_ratio = canvas_height/canvas_width
+canvas = Image.new("RGB", (canvas_width, canvas_height), (0,0,0))
+
+cx = margin_x
+cy = margin_y
+iy = 0
+print("Start printing images on canvas...")
+for i in range(0, len(image_list), 1):
+    file = image_list[i]
+    img = Image.open(file, "r").resize((new_x,new_y))
+    pos = (cx, cy)
+    canvas.paste(img, pos)
+    if ((i%num_rows) == (num_rows-1)):
+        cx = margin_x #reset
+        iy += 1
+    else: cx += new_x + img_dis
+    cy = margin_y + (new_y+img_dis)*iy
+                                        
+print("Done printing!")
+print("Resize canvas")
+canvas = canvas.resize((3840,2160))
+print("Save file...")
+canvas.save("thumbnail_canvas.jpg")
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Modal End -->
+                </div>
+                
+            </div>
+        </div>
+        
+
+    </div>
+</section><!--work section end-->

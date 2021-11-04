@@ -1,0 +1,122 @@
+[{
+  "headline": "Code Review #1",
+  "icon": "fas fa-file-code",
+  "description": "The first Code Review was about creating a website for a general blog.",
+  "technology": "The page was created using: HTML and CSS.",
+  "image": "work-1.jpg",
+  "path": "./FE21-CR01-Philip/index.htm",
+  "type": "front"
+},
+
+{
+  "headline": "Code Review #2",
+  "icon": "fab fa-css3",
+  "description": "The first Code Review was about creating a website for a general blog.",
+  "technology": "The page was created using: HTML and CSS.",
+  "image": "work-2.jpg",
+  "path": "./FE21-CR02-Philip/index.htm",
+  "type": "front"
+},
+
+{
+  "headline": "Code Review #3",
+  "icon": "fas fa-code",
+  "description": "This week's Code Review we had to create a page for a restaurant and make it responsive and look good on \"all\" devices.",
+  "technology": "The page was created using: HTML and SCSS.",
+  "image": "work-3.jpg",
+  "path": "./FE21-CR03-Philip/index.htm",
+  "type": "front"
+},
+
+{
+  "headline": "Code Review #4",
+  "icon": "fab fa-js",
+  "description": "In this Code Review, my job was to create a list of movies for a \"Movie\" factory website with localstorage.",
+  "technology": "The page was created using: HTML, SCSS, Bootstrap and Javascript.",
+  "image": "work-4.jpg",
+  "path": "./FE21-CR04-Philip/index.htm",
+  "type": "front"
+},
+
+{
+  "headline": "Code Review #5",
+  "icon": "fab fa-bootstrap",
+  "description": "We had to create a TypeScript-based system that presents different travel experiences in a web-page.",
+  "technology": "The page was created using: HTML, SCSS, Bootstrap, Typescript and Angular.",
+  "image": "work-5.jpg",
+  "path": "./FE21-CR05-Philip/index.htm",
+  "type": "front"
+},
+
+{
+  "headline": "Code Review #6",
+  "icon": "fab fa-angular",
+  "description": "In this Code Review, I had to create a travel agency web application using Angular.",
+  "technology": "The page was created using: HTML, SCSS, Bootstrap, Typescript and Angular.",
+  "image": "work-6.jpg",
+  "path": "./FE21-CR06-Philip/index.html",
+  "type": "front"
+},
+
+{
+  "headline": "Front-End Project",
+  "icon": "fas fa-user-friends",
+  "description": "This project was created with a team of three people in total over a four day period.",
+  "technology": "The page was created using: HTML, SCSS, Bootstrap, Typescript and Angular.",
+  "image": "fe-project.jpg",
+  "path": "./Front-End Project Week/index.html",
+  "type": "front"
+},
+
+{
+  "headline": "Code Review #10",
+  "icon": "fas fa-book",
+  "description": "For the first full-stack project, I had to create a web application for \"Big Library\" to store all kind of media.",
+  "technology": "The page was created using: HTML, SCSS, Bootstrap, PHP and MySQL.",
+  "image": "work-10.jpg",
+  "path": "./FE21-CR10-Philip/crud/index.php",
+  "type": "back"
+},
+
+
+{
+  "headline": "Code Review #11",
+  "icon": "fas fa-paw",
+  "description": "The requirement for this CR was a CRUD for a pet adoption.",
+  "technology": "The page was created using: HTML, SCSS, Bootstrap, PHP and MySQL.\r\nLogins: ck@mail.de/pm@mail.de 123456",
+  "image": "work-11.jpg",
+  "path": "./FE21-CR11-Philip/petcrudlogin/index.php",
+  "type": "back"
+},
+
+{
+  "headline": "Code Review #12",
+  "icon": "fab fa-php",
+  "description": "I had to make a CRUD for a fictional touristic agency.",
+  "technology": "The page was created using: HTML, SCSS, Bootstrap, PHP and MySQL.",
+  "image": "work-12.jpg",
+  "path": "./FE21-CR12-Philip/travelagency/index.php",
+  "type": "back"
+},
+
+{
+  "headline": "Denk Dich Leicht - Wordpress",
+  "icon": "fab fa-wordpress",
+  "description": "This page was created during my self-employment and is still maintain on a let's say occasional bases.",
+  "technology": "The page was created using: Wordpress, Thrive Themes and other plugins.",
+  "image": "ddl-wordpress.jpg",
+  "path": "https://www.denk-dich-leicht.at",
+  "type": "otherskills"
+},
+
+{
+  "headline": "GIMP Work",
+  "icon": "fas fa-images",
+  "description": "A few thumbnails I created for different channels over the past few years.",
+  "technology": "Those Images were created with GIMP.",
+  "image": "thumbnail_canvas.jpg",
+  "path": "",
+  "type": "otherskills"
+}
+
+]

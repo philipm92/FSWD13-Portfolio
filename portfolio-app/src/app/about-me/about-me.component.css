@@ -1,0 +1,53 @@
+#about {
+  padding-top: 3rem;
+  padding-bottom: 1.25rem;
+  background-color: #fff;
+}
+
+.about-box {
+  padding: 0;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  margin: auto auto;
+  text-align: center;
+}
+
+.about-box img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.about-desc {
+  margin: auto auto;
+}
+
+.about-desc p {
+  text-align: justify;
+  margin: 0 1rem;
+}
+
+.about-desc h4 {
+  margin: 1rem 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .about-box {
+    padding: 0.5rem, 0.25rem;
+    margin: auto auto;
+  }
+  .about-box img {
+    width: 90%;
+    height: auto;
+    margin: auto auto;
+  }
+  .about-desc p {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=about-me.component.css.map */

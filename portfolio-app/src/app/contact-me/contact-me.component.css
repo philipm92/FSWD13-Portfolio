@@ -1,0 +1,72 @@
+#contact {
+  background: url("../../assets/img/bg-2.jpg");
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 1;
+}
+
+.contact-details i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.contact-details h4 {
+  color: white;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  i {
+    font-size: 3rem;
+  }
+}
+
+.contact-form {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.contact-form .form-control {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  border: 1px solid white;
+  border-radius: 0;
+  background-color: transparent !important;
+  color: var(--footer-color-link);
+}
+
+.contact-form h3 {
+  margin-bottom: 1.25rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: var(--footer-color-link);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-text) inset;
+          box-shadow: 0 0 0px 1000px var(--color-text) inset;
+  -webkit-transition: background-color 50000s ease-in-out 0s;
+  transition: background-color 50000s ease-in-out 0s;
+  font-size: inherit;
+  font-family: inherit;
+}
+/*# sourceMappingURL=contact-me.component.css.map */

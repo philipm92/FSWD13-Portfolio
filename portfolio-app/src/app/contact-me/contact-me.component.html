@@ -1,0 +1,98 @@
+<section id="contact">
+    <div class="container my-3">
+        <div class="row">
+            <div class="contact-details d-flex flex-column flex-md-row justify-content-evenly my-2 flex-wrap">
+                <div class="text-center">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Vienna, Austria</h4>
+                </div>
+                <div class="text-center">
+                    <i class="ng buildar fa-envelope"></i>
+                    <h4><a href="mailto:philip.mahlberg@hotmail.com" class="text-white">philip.mahlberg@hotmail.com</a></h4>
+                </div>                
+            </div>
+        </div>
+        
+        <!-- Name, Email, Phone, Message  -->
+        <div class="row">
+            <div class="col col-md-6 mx-auto my-2">
+
+                <form [formGroup]="contact_form" (ngSubmit)="OnSubmit()" class="contact-form" method="POST" action="/sendMail.php">
+                    <h3 class="text-center">Contact me</h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row control-group">
+                                <div class="form-group col-12 controls my-2">
+                                    <input formControlName="name" id="name" type="text" class="form-control" placeholder="Enter Your Name..." [ngClass]="{ 'is-invalid': f.name.invalid && f.name.touched }">
+                                    <div *ngIf="f.name.errors?.required && f.name.touched" class="invalid-feedback">
+                                        Name is required!
+                                    </div>
+                                    <div *ngIf="f.name.errors?.minlength && f.name.touched"  class="invalid-feedback">
+                                        Your name must be at least 2 characters!
+                                    </div> 
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="row control-group">
+                                <div class="form-group col-12 controls my-2">
+                                    <input formControlName="email" id="email" type="email" class="form-control" placeholder="Enter Your Best E-Mail-Address..." [ngClass]="{ 'is-invalid': f.email.invalid && f.email.touched }">
+                                    <div *ngIf="f.email.errors?.required && f.email.touched" class="invalid-feedback">
+                                        E-Mail is required!
+                                    </div>
+                                    <div *ngIf="f.email.errors?.email && f.email.touched"  class="invalid-feedback">
+                                        Please enter a valid E-Mail!
+                                    </div> 
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row control-group">
+                            <div class="form-group col-12 controls my-2">
+                                <input formControlName="phone" id="phone" (keypress)="KeyPress($event)" type="text" class="form-control" placeholder="Enter Your Phone Number (optional)" [ngClass]="{ 'is-invalid': f.phone.invalid && f.phone.touched }">
+                                <div *ngIf="f.phone.errors?.minlength && f.phone.touched"  class="invalid-feedback">
+                                    Your phone number must be at least 6 numbers long!
+                                </div> 
+                                <div *ngIf="f.phone.errors?.maxlength && f.phone.touched"  class="invalid-feedback">
+                                    Your phone number exceeds the limit of 15 numbers!
+                                </div>                                 
+                            </div>                 
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-12 controls my-2">
+                            <textarea formControlName="message" id="message" (input)="GetMsgLength($event)" rows="9" class="form-control" placeholder="Please enter a message..." id="message" [ngClass]="{ 'is-invalid': f.message.invalid && f.message.touched }" style="resize: none;"></textarea>
+                            <div *ngIf="f.message.errors?.required && f.message.touched" class="invalid-feedback">
+                                Message is required!
+                            </div>
+                            <div *ngIf="f.message.errors?.minlength && f.message.touched" class="invalid-feedback">
+                                Your message must be at least 5 characters long!
+                            </div>
+                            <div *ngIf="f.message.errors?.maxlength && f.message.touched" class="invalid-feedback">
+                                You exceeded the limit of 500 total characters!
+                            </div>                                                     
+                        </div>                   
+                        <div class="form-group col-12 text-end text-white">
+                            <span [ngClass]="{ 'fw-bold text-danger': msg_len > 500 }">{{ msg_len }}</span> / 500
+                        </div>
+                      
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="form-group col-12 text-center">
+                            <button [disabled] ="!contact_form.valid" type="submit" class="btn btn-outline-light">Send Message</button>
+                        </div>
+                        <div *ngIf="submitted" class="form-group col-12 text-center text-white my-3">
+                            Message sent! I'll get back to you ASAP!
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
